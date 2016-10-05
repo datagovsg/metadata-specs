@@ -1,19 +1,19 @@
 # Data.gov.s[]()g Metadata Specifications
 
-## Purpose of document 
+## Purpose of document
 
 The **Data.gov.s[]()g** Data Package is based on the protocol proposed by [Open Knowledge International]().
 
-The adoption of the "tidy", machine readable format for data files on **Data.gov.s[]()g** requires metadata to be excluded in the data files. The Open Knowledge International protocol provides a neat solution to packaging metadata with tidy, reusable datasets. 
+The adoption of the "tidy", machine readable format for data files on **Data.gov.s[]()g** requires metadata to be excluded in the data files. The Open Knowledge International protocol provides a neat solution to packaging metadata with tidy, reusable datasets.
 
-This document explains the structure of metadata for datasets on **Data.gov.s[]()g** and what each element means. 
+This document explains the structure of metadata for datasets on **Data.gov.s[]()g** and what each element means.
 
 Each resource download contains the following in a zip file:
 
 1. Data file(s) in CSV, SHP or KML format
 2. Metadata text file in [YAML](http://yaml.org) (See [sample](./sample.txt))
 
-The plain text version of the metadata is based on YAML, a format that is both human- and machine-readable. 
+The plain text version of the metadata is based on YAML, a format that is both human- and machine-readable.
 
 >*See our [Data Quality Guide](https://github.com/datagovsg/data-quality) for details on the requirements for tabular data.*
 
@@ -34,7 +34,7 @@ There are 3 levels of metadata required for the new data.gov.sg:
 ![Metadata Levels Diagram](./images/metadata_levels.png)
 
 ### Quick Note on Capitalisation
-For easy reading, all words in titles and unit of measure should be capitalised, with the following exceptions: 
+For easy reading, all words in titles and unit of measure should be capitalised, with the following exceptions:
 
 1. Short Forms: All letters should be capitalised.
 2. Conjunections: These are words such as *and*, *that* and *since*. Always in lower case.
@@ -46,7 +46,7 @@ Example:
 
 ### Required Fields
 
-The Input and Required? columns in Sections 1, 2 and 3 indicate what is required of agency administrators. 
+The Input and Required? columns in Sections 1, 2 and 3 indicate what is required of agency administrators.
 
 #### Input
 This states whether a field will be filled in automatically or requires user input:
@@ -127,9 +127,9 @@ The schema is a part of the metadata for each CSV resource, which provides detai
 ---
 
 ## 4. Data Types
-Data administrators will need to specify the types and sub-types for each data field in the Schema. Only types discovered by the validation tool can be selected. 
+Data administrators will need to specify the types and sub-types for each data field in the Schema. Only types discovered by the validation tool can be selected.
 
-If the chosen type/sub-type is not applicable to the entire column, an error message will be shown. 
+If the chosen type/sub-type is not applicable to the entire column, an error message will be shown.
 
 | Type | Sub-Type | Description |
 |------|----------|-------------|
@@ -151,9 +151,9 @@ If the chosen type/sub-type is not applicable to the entire column, an error mes
 | | `financial_quarter` | Format: YYYY-[Q]Q <br><br>Start and end dates of financial year must be specified in the description field of the Schema. |
 | | `date_time` | Format (one of the following): <br><ul><li>YYYY-MM-DD[T]hh:mm</li><li>YYYY-MM-DD[T]hh:mm:ss</li><li>YYYY-MM-DD[T]hh:mm+hh:mm</li><li>YYYY-MM-DD[T]hh:mm:ss+hh:mm</li></ul> |
 | | `time` | Format (one of the following): <br><ul><li>hh:mm</li><li>hh:mm:ss</li></ul> |
-| `geo_coordinate` | `latitude` | Lower limit: 103.59 <br>Upper limit: 104.07 |
+| `epsg_4326_geo_coordinate` | `latitude` | Lower limit: 103.59 <br>Upper limit: 104.07 |
 | | `longitude` | Lower limit: 1.13 <br>Upper limit: 1.47 |
-| | `x` | Lower limit: 919.05 <br>Upper limit: 54338.72 |
+| `epsg_3414_geo_coordinate` | `x` | Lower limit: 919.05 <br>Upper limit: 54338.72 |
 | | `y` | Lower limit: 12576.34 <br>Upper limit: 50172.05 |
 
 ---
@@ -163,22 +163,3 @@ If the chosen type/sub-type is not applicable to the entire column, an error mes
 We will continue to review our Metadata Specifications to ensure that we meet the needs of our users.
 
 We welcome all feedback to improve the quality of data published on Data.gov.sg. Raise an issue on Github or drop us an email at [feedback@data.gov.sg](mailto:data.gov.sg) if you have any comments or queries on the guide.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
