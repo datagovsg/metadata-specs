@@ -83,12 +83,12 @@ This is the metadata that applies to all CSV resources in one dataset.
 | `Publisher` | Agency publishing the dataset. | User | O |
 | `Admin 1` | Main contact person for dataset.<br>There are 3 sub-fields:<br><ul><li>name</li><li>department</li><li>email</li></ul><br>Note: This is only for internal reference. All public queries on datasets should be directed to [feedback@data.gov.sg](mailto:feedback@data.gov.sg). | User | O |
 | `Admin 2` | Optional field. Second contact person for dataset.<br>There are 3 sub-fields:<br><ul><li>name</li><li>department</li><li>email</li></ul><br>Note: This is only for internal reference. All public queries on datasets should be directed to [feedback@data.gov.sg](mailto:feedback@data.gov.sg). | User | X  |
-| `Source` | Agency owning the dataset. This could be the same as publisher. <br><br>Multiple entries are allowed for cases where dataset is compiled from multiple agencies.  | User | O   |
+| `Sources` | Agency owning the dataset. This could be the same as publisher. <br><br>Multiple entries are allowed for cases where dataset is compiled from multiple agencies.  | User | O   |
 | `Source URL` | Optional field for URL of agency's own data repository for corresponding dataset and/or associated report. | User | X |
 |`License` | The use of all Singapore government open datasets is governed by the [Open Data Licence](https://data.gov.sg/terms). | Auto | O |
 |`Frequency` | One of the following:<br><ul><li>Annual</li><li>Half-yearly</li><li>Quarterly</li><li>Monthly</li><li>Weekly</li><li>Daily</li><li>Real-time</li><li>Ad-hoc</li><li>Other (User must specify)</li></ul> | User | O |
 | `Coverage` | The time period covered by the dataset. For real-time data, the end-date will be the date of the latest update. <br><br>Expressed in the form:<br>"YYYY-MM-DD to YYYY-MM-DD" | Auto | O |
-| `Last updated` | In the ISO 8601 format YYYY-MM-DD. | Auto | O |
+| `Last Updated` | In the ISO 8601 format YYYY-MM-DD. | Auto | O |
 | `Resources` | See next section [Metadata for Resources](#2-metadata-for-resources) for details. | User | O |
 
 ---
