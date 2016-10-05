@@ -89,7 +89,7 @@ This is the metadata that applies to all CSV resources in one dataset.
 |`Frequency` | One of the following:<br><ul><li>Annual</li><li>Half-yearly</li><li>Quarterly</li><li>Monthly</li><li>Weekly</li><li>Daily</li><li>Real-time</li><li>Ad-hoc</li><li>Other (User must specify)</li></ul> | User | O |
 | `Coverage` | The time period covered by the dataset. For real-time data, the end-date will be the date of the latest update. <br><br>Expressed in the form:<br>"YYYY-MM-DD to YYYY-MM-DD" | Auto | O |
 | `Last updated` | In the ISO 8601 format YYYY-MM-DD. | Auto | O |
-| `Resources` | See next section [Metadata for Resources](#2_metadata_for_resources) for details. | User | O |
+| `Resources` | See next section [Metadata for Resources](#2-metadata-for-resources) for details. | User | O |
 
 ---
 
@@ -106,7 +106,7 @@ Each table resource has its own set of metadata, such as title and a schema. Som
 | `Format` | Refers to file format.<br><br>*e.g. "csv"* | Auto | O |
 | `Description` | Optional field for footnotes specific to this resource. Each resource file may have multiple lines of description. | User | X |
 | `Last Updated` | In the ISO 8601 format YYYY-MM-DD. | Auto | O |
-| `Schema` | See next section [Metadata for Schema](#3_metadata_for_schema) for details. | Auto | O |
+| `Schema` | See next section [Metadata for Schema](#3-metadata-for-schema) for details. | Auto | O |
 
 ---
 
@@ -118,7 +118,7 @@ The schema is a part of the metadata for each CSV resource, which provides detai
 | `Name` | This must correspond to the unique column header in the data file. It is case-sensitive. | Auto | O |
 | `Title` | The human-readable title of the column. | User | O |
 | `Type` | Data type. See next section **Data Types** for the full listing. <br><br>Note: Some variables represented as numbers, such as telephone numbers and postal codes, are classified as strings, not numeric variables, as they are not quantitative in nature. | User | O |
-| `Sub Type` | Data sub-type. This is dependent on the type field. See next section [Data Types](#4_data_types) for the full listing of data sub-types used. | User | O |
+| `Sub Type` | Data sub-type. This is dependent on the type field. See next section [Data Types](#4-data-types) for the full listing of data sub-types used. | User | O |
 | `Description` | Each variable may have multiple lines of description. Each footnote should be entered as a separate line under this item. <br><br>Some data types and subtypes require specific descriptions:<br><ul><li>Numeric (Percentage)</li><li>Datetime (Financial year/half/quarter)</li></ul> | User | △ |
 | `Unit of Measure` | Compulsory for `numeric (general)` variables. <br><br>If the  column contain counts, the common form is "No. of [object]s", such as `No. of Students`. <br><br>For monetary values, we use `S$` as the unit of measurement. If the amount is in thousands, millions or billions, we use `S$ Thousand/Million/Billion`. For indices, we use `Index` as the unit of measurement. <br><br>For other numeric variables that are not counts, we use an appropriate generic measure such as `Ratio`. | User | △ |
 | `Format` | Compulsory for all `datetime` types. This is automatically generated for `date`, `date_time` and `time` sub types. For example, the format for a *month* column will be *yyyy-mm*. | Auto | △ |
